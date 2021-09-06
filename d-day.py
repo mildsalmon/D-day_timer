@@ -5,7 +5,8 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 import os
 
-form_class = uic.loadUiType('D:\CloudStation\SourceCode\d-day\main.ui')[0]
+# form_class = uic.loadUiType('D:\CloudStation\SourceCode\d-day\main.ui')[0]
+form_class = uic.loadUiType('main.ui')[0]
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 SAVE_DIR = os.path.join(BASE_DIR, 'save.txt')
 
@@ -42,6 +43,11 @@ class MyWindow(QMainWindow, form_class):
         diff_days = diff_time.days
         diff_full = str(diff_days) + "일 " + str(diff_hours) + "시" + str(diff_minutes) + "분" + str(diff_seconds) + "초"
 
+        diff_weeks = diff_time.days // 7
+        diff_weeks_days = diff_time.days - (diff_weeks * 7)
+
+        diff_weeks_full = str(diff_weeks) + "주 " + str(diff_weeks_days) + "일"
+
         diff_total = diff_time.seconds + (diff_time.days * 24 * 3600)
 
         # print(diff_total)
@@ -49,6 +55,7 @@ class MyWindow(QMainWindow, form_class):
 
         self.label_1.setText(str(diff_total))
         self.lineEdit.setText(diff_full)
+        self.lineEdit_2.setText(diff_weeks_full)
 
     def display_time(self):
         self.current_date_time = QDateTime.currentDateTime()
@@ -69,9 +76,15 @@ class MyWindow(QMainWindow, form_class):
 
         self.write_file(self.goal_time)
 
+    # BASE_DIR = os.path.abspath(os.path.dirname(
+    # ))
+    # SAVE_DIR = os.path.join(BASE_DIR, 'save.txt')
+
     def write_file(self, goal_time):
+        # QMessageBox.question(self, "mes", BASE_DIR)
         with open(SAVE_DIR, 'w+', encoding='utf-8') as f_write:
             f_write.writelines(str(goal_time))
+            # QMessageBox.question(self, "mes", SAVE_DIR)
 
     def open_file(self):
         with open(SAVE_DIR, 'r+', encoding='utf-8') as f_read:
