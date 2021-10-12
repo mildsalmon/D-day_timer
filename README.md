@@ -1,6 +1,6 @@
 > 관련 개발일지는 아래 링크를 참고해주세요.
 > 
-> ![블로그 개발일지](https://blex.me/@mildsalmon/d-day-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8)
+> [블로그 개발일지](https://blex.me/@mildsalmon/d-day-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8)
 
 # D-day_timer
 
