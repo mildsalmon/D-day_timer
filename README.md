@@ -1,4 +1,9 @@
+> 관련 개발일지는 아래 링크를 참고해주세요.
+> 
+> ![블로그 개발일지](https://blex.me/@mildsalmon/d-day-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8)
+
 # D-day_timer
+
 목표 날짜까지 얼마나 남았는지 보여주는 프로그램.
 
 # 1. 기획 의도
@@ -18,9 +23,16 @@
 2. 바로가기를 시작프로그램 폴더에 복사한다.
 	- 보통 `C:\Users\(내 사용자 명)\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`이 시작프로그램 위치이다.
  
+# 3. 성과
+
+- 프로그램이 실행되면 자동으로 목표시간을 불러옴.
+- 프로그램 실행시 자동으로 D-Day 카운트가 진행됨.
+
 # 3. 시스템 흐름도
 
-![d-day 프로그램_시스템구성](https://user-images.githubusercontent.com/28708846/131595624-5849f886-91b7-4e8e-9e61-d27d6f2065bb.png)
+![d-day 프로그램_시스템구성](/image/system_flow.png)
+
+- 컴퓨터 시작시 자동으로 실행되도록 시작프로그램 위치에 바로가기를 위치함.
 
 # 4. 시연 사진
 
@@ -32,8 +44,3 @@
 - [ ] 디자인을 더 이쁘게 하는 것.
 - [ ] d-day 여러개 설정
 
-# 6. 참고 자료
-
-- 관련 내용 포스팅
-
-  - https://blex.me/@mildsalmon/d-day-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8
